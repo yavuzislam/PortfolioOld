@@ -1,0 +1,25 @@
+﻿@model FeatureDto
+@{
+    ViewData["Title"] = "UpdateFeature";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="chart-box">
+        <h4>Feature Update Page</h4>
+        <br />
+        <form method="post">
+            <input type="hidden" asp-for="Id" />
+            <label>Title</label>
+            <input type="text" class="form-control" asp-for="Title" />
+            <br />
+            <label>Description</label>
+            <input type="text" class="form-control" asp-for="Description" />
+            <br />
+            <label>Introduction</label>
+            <input type="text" class="form-control" asp-for="Introduction" />
+            <br />
+            <button class="btn btn-primary">Update Feature</button>
+        </form>
+    </div>
+</div>

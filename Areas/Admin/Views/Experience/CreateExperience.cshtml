@@ -1,0 +1,24 @@
+﻿@model CreateExperienceDto
+@{
+    ViewData["Title"] = "CreateExperience";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="chart-box">
+        <h4>Experience Addition Page</h4>
+        <br />
+        <form method="post">
+            <label>Title</label>
+            <input type="text" class="form-control" asp-for="Title" />
+            <br />
+            <label>Description</label>
+            <input type="text" class="form-control" asp-for="Description" />
+            <br />
+            <label>ImagePath</label>
+            <input type="text" class="form-control" asp-for="ImagePath" />
+            <br />
+            <button class="btn btn-primary">Add Experience</button>
+        </form>
+    </div>
+</div>

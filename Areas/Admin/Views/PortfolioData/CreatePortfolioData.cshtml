@@ -1,0 +1,24 @@
+﻿@model CreatePortfolioDataDto
+@{
+    ViewData["Title"] = "CreatePortfolioData";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="chart-box">
+        <h4>PortfolioData Addition Page</h4>
+        <br />
+        <form method="post">
+            <label>Name</label>
+            <input type="text" class="form-control" asp-for="Name" />
+            <br />
+            <label>Url</label>
+            <input type="text" class="form-control" asp-for="Url" />
+            <br />
+            <label>ImagePath</label>
+            <input type="text" class="form-control" asp-for="ImagePath" />
+            <br />
+            <button class="btn btn-primary">Add PortfolioData</button>
+        </form>
+    </div>
+</div>

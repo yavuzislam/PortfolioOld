@@ -1,0 +1,23 @@
+﻿@model CreateSkillDto
+
+@{
+    ViewData["Title"] = "CreateSkill";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="col-md-12">
+    <div class="chart-box">
+        <h4>Skill Addition Page</h4>
+        <br />
+        <form method="post">
+            <label>Title</label>
+            <input type="text" class="form-control" asp-for="Title" />
+            <br />
+            <label>Ratio</label>
+            <input type="text" class="form-control" asp-for="Ratio" />
+            <br />
+            <button class="btn btn-primary">Add Skill</button>
+        </form>
+    </div>
+</div>

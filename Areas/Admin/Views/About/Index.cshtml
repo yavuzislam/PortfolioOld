@@ -1,0 +1,45 @@
+﻿@model List<AboutDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="chart-box">
+        <h4>About Table</h4>
+        <div class="bs-example" data-example-id="bordered-table">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>ImagePath</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@item.Description</td>
+                            <td>@item.Age</td>
+                            <td>@item.Email</td>
+                            <td>@item.Phone</td>
+                            <td>@item.Address</td>
+                            <td>@item.ImagePath</td>
+                            <td><a href="/Admin/About/DeleteAbout/@item.Id" class="btn btn-danger">Delete</a></td>
+                            <td><a href="/Admin/About/UpdateAbout/@item.Id" class="btn btn-success">Update</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <a href="/Admin/About/CreateAbout/" class="btn btn-primary">Create About</a>
+        </div>
+    </div>
+</div>

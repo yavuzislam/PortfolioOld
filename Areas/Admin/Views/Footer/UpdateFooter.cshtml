@@ -1,0 +1,22 @@
+﻿@model FooterDto
+@{
+    ViewData["Title"] = "UpdateFooter";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="chart-box">
+        <h4>Footer Update Page</h4>
+        <br />
+        <form method="post">
+            <input type="hidden" asp-for="Id" />
+            <label>Name</label>
+            <input type="text" class="form-control" asp-for="Name" />
+            <br />
+            <label>Title</label>
+            <input type="text" class="form-control" asp-for="Title" />
+            <br />
+            <button class="btn btn-primary">Update Footer</button>
+        </form>
+    </div>
+</div>

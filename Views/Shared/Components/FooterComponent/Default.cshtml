@@ -1,0 +1,28 @@
+﻿@model FooterDto
+
+<footer class="pt-4 pb-4 text-center bg-light">
+    <div class="container">
+        <div class="my-3">
+            <div class="h4">@Model.Name</div>
+            <p>@Model.Title</p>
+            <div class="social-nav">
+                <nav role="navigation">
+                    <ul class="nav justify-content-center">
+                        @foreach (var item in ViewBag.Media)
+                        {
+                            <li class="nav-item"><a class="nav-link" href="@item.Url" target="_blank" title="@item.Title"><i class="fab fa-@item.Icon"></i><span class="menu-title sr-only">@item.Title</span></a></li>
+
+                        }
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="text-small text-secondary">
+            <div class="mb-1">&copy; Super Folio. All rights reserved.</div>
+            <div>
+                <!-- Make sure to buy a license for the template before removing the line below. Buy license on https://templateflip.com/ -->Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a>
+            </div>
+        </div>
+    </div>
+</footer>

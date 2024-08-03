@@ -4,6 +4,7 @@ using Portfolio.Repositories.AboutRepositories;
 using Portfolio.Repositories.ContactRepositories;
 using Portfolio.Repositories.ExperienceRepositories;
 using Portfolio.Repositories.FeatureRepositories;
+using Portfolio.Repositories.FooterRepositories;
 using Portfolio.Repositories.PortfolioDataRepositories;
 using Portfolio.Repositories.ServiceRepositories;
 using Portfolio.Repositories.SkillRepositories;
@@ -32,6 +33,7 @@ builder.Services.AddScoped<IPortfolioDataRepository, PortfolioDataRepository>();
 builder.Services.AddScoped<IExperienceRepository, ExperienceRepository>();
 builder.Services.AddScoped<ITestimonialRepository, TestimonialRepository>();
 builder.Services.AddScoped<IContactRepository, ContactRepository>();
+builder.Services.AddScoped<IFooterRepository, FooterRepository>();
 
 
 var app = builder.Build();
